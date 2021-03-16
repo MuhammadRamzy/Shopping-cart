@@ -1,0 +1,32 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center"><i class="fas fa-cart-plus"></i> Add Product</h2>
+                <form action="/admin/add-product" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" placeholder="Name" name="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Category</label>
+                        <input type="text" class="form-control" placeholder="Category" name="Category" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description</label>
+                        <input type="text" class="form-control" placeholder="Description" name="Description" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Price</label>
+                        <input type="number" class="form-control" placeholder="Price" name="Price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Image</label>
+                        <input type="file" class="form-control" placeholder="Image" name="Image" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center"><i class="fas fa-edit"></i> Edit Product</h2>
+                <form action="/admin/edit-product/{{product._id}}" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" placeholder="Name" name="Name" required value="{{product.Name}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Category</label>
+                        <input type="text" class="form-control" placeholder="Category" name="Category" required value="{{product.Category}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description</label>
+                        <input type="text" class="form-control" placeholder="Description" name="Description" required value="{{product.Description}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Price</label>
+                        <input type="number" class="form-control" placeholder="Price" name="Price" required value="{{product.Price}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        <img src="/product-images/{{product._id}}.jpg" alt="" style="width: 90px;height:130px;object-fit:scale-down;" class="m-3" id="imgView">
+                        <input type="file" class="form-control" placeholder="Image" name="Image" onchange="viewImage(event)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function viewImage(event){
+        document.getElementById('imgView').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>
